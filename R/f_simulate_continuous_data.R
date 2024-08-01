@@ -32,7 +32,9 @@ getSimulatedTwoArmMeans <- function(
         seed = NA_integer_) {
 
     # TODO use assertions to check all input arguments, see 'checkmate' package
-
+    if (is.na(seed)) {
+      seed <- 12345
+    }
     # specify seed
     if (!is.na(seed)) {
         set.seed(seed)
